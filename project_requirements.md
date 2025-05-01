@@ -31,6 +31,18 @@ This document outlines the essential requirements and best practices for creatin
 - Easy-to-scan sections
 - Project-specific sections as needed
 
+### 4. Privacy Policy Requirements
+- Each project that collects user data must have a privacy policy
+- Privacy policy should be accessible at: `example.com/projects/[appname]/privacy_policy.html`
+- Privacy policy should be written in both Markdown and HTML formats
+- Privacy policy should include:
+  - Last updated date
+  - Data collection practices
+  - Data storage methods
+  - User rights
+  - Contact information
+  - Compliance with relevant regulations (e.g., COPPA for children's apps)
+
 ## Technical Requirements
 
 ### Accessibility
@@ -42,7 +54,7 @@ This document outlines the essential requirements and best practices for creatin
 
 ### Performance
 - Optimized images
-- Efficient CSS/JS
+- Efficient CSS
 - Fast loading times
 - Minimal dependencies
 
@@ -64,10 +76,8 @@ project/
 ├── index.html
 ├── css/
 │   └── style.css
-├── js/
-│   └── main.js
 └── assets/
-    └── img/
+    └── logo/
 ```
 
 ## Best Practices
@@ -81,6 +91,8 @@ project/
 8. Comment code where necessary
 9. Keep file structure organized
 10. Follow project-specific design guidelines
+11. Include privacy policy for projects that collect user data
+12. Maintain consistent styling across all pages
 
 ## Notes
 - Each project can have its own unique design system
@@ -88,4 +100,6 @@ project/
 - Interactive elements should have appropriate states (hover, focus, active)
 - Images should be optimized for web
 - Code should be well-documented and maintainable
-- Consider the target audience and project goals when implementing features 
+- Consider the target audience and project goals when implementing features
+- Privacy policies should be reviewed and updated regularly
+- All project pages should maintain consistent branding and navigation 
