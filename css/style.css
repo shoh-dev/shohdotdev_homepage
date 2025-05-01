@@ -8,16 +8,6 @@
   --bg-alt: #f9fafb;
 }
 
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #f3f4f6;
-    --text-light: #9ca3af;
-    --bg: #111827;
-    --bg-alt: #1f2937;
-  }
-}
-
 /* Reset & Base */
 * {
   margin: 0;
@@ -330,12 +320,9 @@ h2 {
   }
 }
 
-/* Dark mode toggle */
+/* Remove dark mode toggle */
 [data-theme="dark"] {
-  --text: #f3f4f6;
-  --text-light: #9ca3af;
-  --bg: #111827;
-  --bg-alt: #1f2937;
+  display: none;
 }
 
 /* ---- Reset & helpers ---- */
@@ -346,13 +333,11 @@ body {
   line-height: 1.6;
   background: var(--bg);
   color: var(--text);
-  transition: background .3s, color .3s;
 }
 
+/* Remove dark mode class */
 body.dark {
-  --bg: #1d1d1f;
-  --text: #f9fafb;
-  --bg-alt: #2b2b2f;
+  display: none;
 }
 
 .section { padding: 4rem 0; }
