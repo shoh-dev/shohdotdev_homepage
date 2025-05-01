@@ -1,77 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <!-- Meta -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Shohjahon Komiljonov – Flutter & full-stack dev. Portfolio, side-projects & blog." />
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/logo/logo_no_bg.png">
-  <link rel="apple-touch-icon" href="assets/logo/logo_no_bg.png">
-  <meta name="theme-color" content="#ffffff">
-
-  <!-- Open Graph for social share -->
-  <meta property="og:title" content="Shoh.dev – Blog" />
-  <meta property="og:description" content="Personal site of Shohjahon Komiljonov." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://shoh.dev/blog" />
-  <meta property="og:image" content="https://shoh.dev/assets/logo/logo_no_bg.png" />
-
-  <title>Blog - Shoh.dev</title>
-  <link rel="stylesheet" href="css/style.css" />
+    <title>Blog - Shoh.dev</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Header & nav -->
-  <header class="header">
-    <nav class="nav container">
-      <a href="index.html" class="logo">shoh.dev</a>
-
-      <div class="nav-right">
-        <ul class="menu">
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="blog.html" class="active">Blog</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-
-        <button id="themeToggle" aria-label="toggle theme" class="theme-btn">
-          🌙
-        </button>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container hero-content">
-      <h1>My Blog</h1>
-      <p>Thoughts, tutorials, and insights about development</p>
-    </div>
-  </section>
-
-  <!-- Blog Section -->
-  <section class="section">
     <div class="container">
-      <h1 class="section-title">Blog Posts</h1>
-      <div class="grid blog-grid">
-        <!-- === Blog card template ===
-        <article class="card blog-card">
-          <h3><a href="/posts/cursor-power-tips.html">Why I Switched to Cursor IDE</a></h3>
-          <p class="meta">Apr 30 2025 · 4 min read</p>
-          <p>Quick teaser text to hook the reader…</p>
-        </article>
-        ================================= -->
-      </div>
-    </div>
-  </section>
+        <table>
+            <tr>
+                <td colspan="2" class="header">
+                    <h1>Shoh.dev</h1>
+                    <ul class="menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="blog.html" class="active">Blog</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <h2>My Blog</h2>
+                    <p>Thoughts, tutorials, and insights about development</p>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p class="copyright">© 2024 Shohjahon Komiljonov</p>
-    </div>
-  </footer>
+                    <div class="post">
+                        <h3><a href="#">Why I Switched to Cursor IDE</a></h3>
+                        <p class="meta">Apr 30 2025 · 4 min read</p>
+                        <p>Quick teaser text to hook the reader...</p>
+                    </div>
 
-  <script src="js/main.js"></script>
+                    <div class="post">
+                        <h3><a href="#">Building a Flutter App from Scratch</a></h3>
+                        <p class="meta">Apr 25 2025 · 8 min read</p>
+                        <p>Learn how to build a complete Flutter application...</p>
+                    </div>
+
+                    <div class="post">
+                        <h3><a href="#">The Future of Web Development</a></h3>
+                        <p class="meta">Apr 20 2025 · 6 min read</p>
+                        <p>Exploring upcoming trends in web development...</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="footer">
+                    © 2025 Shohjahon Komiljonov
+                </td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html> 

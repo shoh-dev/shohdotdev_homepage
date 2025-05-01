@@ -1,132 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- Meta -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Shohjahon Komiljonov – Flutter & full-stack dev. Portfolio, side-projects & blog." />
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/logo/logo_no_bg.png">
-  <link rel="apple-touch-icon" href="assets/logo/logo_no_bg.png">
-  <meta name="theme-color" content="#ffffff">
-
-  <!-- Open Graph for social share -->
-  <meta property="og:title" content="Shoh.dev – Portfolio & Blog" />
-  <meta property="og:description" content="Personal site of Shohjahon Komiljonov." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://shoh.dev/" />
-  <meta property="og:image" content="https://shoh.dev/assets/logo/logo_no_bg.png" />
-
-  <title>shoh.dev - Portfolio & Blog</title>
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-  <!-- Header & nav -->
-  <header class="header">
-    <nav class="nav container">
-      <a href="index.html" class="logo">shoh.dev</a>
-
-      <div class="nav-right">
-        <ul class="menu">
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-
-        <button id="themeToggle" aria-label="toggle theme" class="theme-btn">
-          🌙
-        </button>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container hero-content">
-      <h1>Flutter & Full-Stack Developer</h1>
-      <p>Building beautiful, performant applications with modern technologies</p>
-      <div class="hero-buttons">
-        <a href="#projects" class="btn">View Projects</a>
-        <a href="#contact" class="btn btn-outline">Contact Me</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Featured Projects Section -->
-  <section id="projects" class="section alt-bg">
+<html>
+  <head>
+    <title>Shoh.dev - Portfolio & Blog</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <div class="container">
-      <h2 class="section-title">Featured Projects</h2>
-      <div class="grid projects-grid">
-        <!-- Project Card 1 -->
-        <article class="card project-card">
-          <div class="card-body">
-            <h3>Project Name</h3>
-            <p>A brief description of the project and its key features.</p>
-            <div class="tech-tags">
-              <span class="tag">Flutter</span>
-              <span class="tag">Firebase</span>
+      <table>
+        <tr>
+          <td colspan="2" class="header">
+            <h1>Shoh.dev</h1>
+            <ul class="menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td width="70%">
+            <h2>Welcome to my website!</h2>
+            <p>
+              I'm a Flutter & Full-Stack Developer building applications with
+              modern technologies.
+            </p>
+
+            <h2>Featured Projects</h2>
+            <div class="project">
+              <h3>Project Name</h3>
+              <p>A brief description of the project and its key features.</p>
+              <p><strong>Technologies:</strong> Flutter, Firebase</p>
+              <p><a href="#">View Project →</a></p>
             </div>
-            <a href="#" class="project-link">View Project →</a>
-          </div>
-        </article>
 
-        <!-- Project Card 2 -->
-        <article class="card project-card">
-          <div class="card-body">
-            <h3>Project Name</h3>
-            <p>A brief description of the project and its key features.</p>
-            <div class="tech-tags">
-              <span class="tag">React</span>
-              <span class="tag">Node.js</span>
-            </div>
-            <a href="#" class="project-link">View Project →</a>
-          </div>
-        </article>
-
-        <!-- Project Card 3 -->
-        <article class="card project-card">
-          <div class="card-body">
-            <h3>Project Name</h3>
-            <p>A brief description of the project and its key features.</p>
-            <div class="tech-tags">
-              <span class="tag">Flutter</span>
-              <span class="tag">REST API</span>
-            </div>
-            <a href="#" class="project-link">View Project →</a>
-          </div>
-        </article>
-      </div>
-      <div class="text-center mt-8">
-        <a href="projects.html" class="btn">View All Projects</a>
-      </div>
+            <p><a href="projects.html">View All Projects →</a></p>
+          </td>
+          <td width="30%" valign="top">
+            <h2>Contact</h2>
+            <p>Have a question or want to get in touch?</p>
+            <ul>
+              <li><a href="mailto:komiljonovshohjahon1@gmail.com">Email</a></li>
+              <li>
+                <a href="https://github.com/komiljonovshohjahon" target="_blank"
+                  >GitHub</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/shokhjakhon-komiljonov-582466173/"
+                  target="_blank"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" class="footer">© 2025 Shohjahon Komiljonov</td>
+        </tr>
+      </table>
     </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <div class="container">
-      <div class="contact-content">
-        <h2 class="section-title">Connect</h2>
-        <p class="contact-text">
-          Have a question or want to get in touch? Feel free to reach out through any of these channels.
-        </p>
-        <div class="social-links">
-          <a href="mailto:komiljonovshohjahon1@gmail.com">Email</a>
-          <a href="https://github.com/komiljonovshohjahon" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/shokhjakhon-komiljonov-582466173/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p class="copyright">© 2025 Shohjahon Komiljonov</p>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
-</body>
-</html> 
+  </body>
+</html>

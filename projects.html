@@ -1,108 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <!-- Meta -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Shohjahon Komiljonov – Flutter & full-stack dev. Portfolio, side-projects & blog." />
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/logo/logo_no_bg.png">
-  <link rel="apple-touch-icon" href="assets/logo/logo_no_bg.png">
-  <meta name="theme-color" content="#ffffff">
-
-  <!-- Open Graph for social share -->
-  <meta property="og:title" content="Shoh.dev – Projects" />
-  <meta property="og:description" content="Personal site of Shohjahon Komiljonov." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://shoh.dev/projects" />
-  <meta property="og:image" content="https://shoh.dev/assets/logo/logo_no_bg.png" />
-
-  <title>Projects - Shoh.dev</title>
-  <link rel="stylesheet" href="css/style.css" />
+    <title>Projects - Shoh.dev</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Header & nav -->
-  <header class="header">
-    <nav class="nav container">
-      <a href="index.html" class="logo">shoh.dev</a>
-
-      <div class="nav-right">
-        <ul class="menu">
-          <li><a href="projects.html" class="active">Projects</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-
-        <button id="themeToggle" aria-label="toggle theme" class="theme-btn">
-          🌙
-        </button>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container hero-content">
-      <h1>My Projects</h1>
-      <p>Explore my latest work and side projects</p>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="section alt-bg">
     <div class="container">
-      <h2 class="section-title">All Projects</h2>
-      <div class="grid projects-grid">
-        <!-- Project Card 1 -->
-        <article class="card project-card">
-          <div class="card-body">
-            <h3>Project Name</h3>
-            <p>A brief description of the project and its key features.</p>
-            <div class="tech-tags">
-              <span class="tag">Flutter</span>
-              <span class="tag">Firebase</span>
-            </div>
-            <a href="#" class="project-link">View Project →</a>
-          </div>
-        </article>
+        <table>
+            <tr>
+                <td colspan="2" class="header">
+                    <h1>Shoh.dev</h1>
+                    <ul class="menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html" class="active">Projects</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <h2>My Projects</h2>
+                    <p>Explore my latest work and side projects</p>
 
-        <!-- Project Card 2 -->
-        <article class="card project-card">
-          <div class="card-body">
-            <h3>Project Name</h3>
-            <p>A brief description of the project and its key features.</p>
-            <div class="tech-tags">
-              <span class="tag">React</span>
-              <span class="tag">Node.js</span>
-            </div>
-            <a href="#" class="project-link">View Project →</a>
-          </div>
-        </article>
-
-        <!-- Project Card 3 -->
-        <article class="card project-card">
-          <div class="card-body">
-            <h3>Project Name</h3>
-            <p>A brief description of the project and its key features.</p>
-            <div class="tech-tags">
-              <span class="tag">Flutter</span>
-              <span class="tag">REST API</span>
-            </div>
-            <a href="#" class="project-link">View Project →</a>
-          </div>
-        </article>
-      </div>
+                    <div class="project">
+                        <h3>Project Name</h3>
+                        <p>A brief description of the project and its key features.</p>
+                        <p><strong>Technologies:</strong> Flutter, Firebase</p>
+                        <p><a href="#">View Project →</a></p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="footer">
+                    © 2025 Shohjahon Komiljonov
+                </td>
+            </tr>
+        </table>
     </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p class="copyright">© 2024 Shohjahon Komiljonov</p>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
 </body>
 </html> 
