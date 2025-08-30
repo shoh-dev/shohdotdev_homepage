@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExpenseTracker - Smart Emoji-Based Expense Tracking</title>
+    <meta name="description" content="The most intuitive expense tracker with emoji categorization, custom keypad, and powerful insights. Make budgeting fun and effortless.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: linear-gradient(180deg, #ffffff, #f8fafc);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            padding: 60px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 30px;
+            background: white;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .btn-primary:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255,255,255,0.5);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            text-align: center;
+            color: #6b7280;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 16px;
+            background: #f8fafc;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+
+        .feature-description {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        /* App Showcase */
+        .showcase {
+            padding: 80px 0;
+            background: linear-gradient(180deg, #f8fafc, #e2e8f0);
+        }
+
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .showcase-card {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .showcase-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+
+        .showcase-description {
+            color: #6b7280;
+            margin-bottom: 25px;
+        }
+
+        .showcase-demo {
+            background: #dcfce7;
+            color: #166534;
+            padding: 15px;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            border: 1px solid #bbf7d0;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .cta-description {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .cta-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Hero Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">💰</div>
+            <h1 class="hero-title">
+                Track Expenses with<br>
+                Emoji Magic
+            </h1>
+            <p class="hero-subtitle">
+                The most intuitive expense tracker that makes budgeting fun with emoji categorization, custom keypad, and powerful insights.
+            </p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">📱 Download App</a>
+                <a href="#" class="btn btn-outline">🎥 Watch Demo</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Our App?</h2>
+            <p class="section-subtitle">
+                Every feature designed to make expense tracking effortless, intuitive, and actually enjoyable.
+            </p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">😊</span>
+                    <h3 class="feature-title">Emoji Categories</h3>
+                    <p class="feature-description">
+                        Organize expenses with fun emojis. From 🍕 food to 🎮 entertainment, make budgeting visual and enjoyable.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">⌨️</span>
+                    <h3 class="feature-title">Custom Keypad</h3>
+                    <p class="feature-description">
+                        Lightning-fast input with our custom numeric keypad. Add amounts and quick notes in seconds.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">📊</span>
+                    <h3 class="feature-title">Smart Insights</h3>
+                    <p class="feature-description">
+                        Sort, filter, and summarize your spending. Get powerful analytics to understand your money habits.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">🎯</span>
+                    <h3 class="feature-title">Essentials Only</h3>
+                    <p class="feature-description">
+                        Clean, minimal interface focused on what matters. No clutter, just the features you need.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">📱</span>
+                    <h3 class="feature-title">Mobile First</h3>
+                    <p class="feature-description">
+                        Designed for your phone. Quick entry, swipe gestures, and thumb-friendly navigation.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">🔍</span>
+                    <h3 class="feature-title">Advanced Filters</h3>
+                    <p class="feature-description">
+                        Find any expense instantly. Filter by date, amount, category, or search through your notes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Showcase Section -->
+    <section class="showcase">
+        <div class="container">
+            <h2 class="section-title">See It In Action</h2>
+            <p class="section-subtitle">
+                Real examples of how our app makes expense tracking simple and visual
+            </p>
+            
+            <div class="showcase-grid">
+                <div class="showcase-card">
+                    <h3 class="showcase-title">Quick Expense Entry</h3>
+                    <p class="showcase-description">Tap, type amount, add emoji, save. That's it!</p>
+                    <div class="showcase-demo">💰 75,000 ➜ 🍕 Pizza night</div>
+                </div>
+                
+                <div class="showcase-card">
+                    <h3 class="showcase-title">Smart Categorization</h3>
+                    <p class="showcase-description">Your expenses organized by emojis you choose</p>
+                    <div class="showcase-demo">🎉 Birthday gift • 🥤 Drinks • 🍉 Groceries</div>
+                </div>
+                
+                <div class="showcase-card">
+                    <h3 class="showcase-title">Powerful Analytics</h3>
+                    <p class="showcase-description">See your spending patterns at a glance</p>
+                    <div class="showcase-demo">Total: 3,227,000 • Count: 5 • Top: 1,500,000</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2 class="cta-title">Ready to Transform Your Budgeting?</h2>
+            <p class="cta-description">
+                Join thousands of users who've made expense tracking fun and effortless
+            </p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">📱 Get Started Free</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
